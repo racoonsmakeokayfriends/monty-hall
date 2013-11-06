@@ -1,0 +1,199 @@
+html    {
+    font-family: "Lucida Console", sans-serif;
+    background-color: #333333;
+    color:#EFEFEF;
+}
+
+h1	{
+	text-align: center;
+}
+
+h2  {
+    color: #00CCD6;
+}
+
+h3  {
+    text-align: center;
+}
+
+button {
+    height: 50px;
+    width: 200px;
+    position: relative;
+    top:10px;
+    left:300px;
+
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    font-family: "Consolas", sans-serif;
+    margin-right: 20px;
+    background-color: #E9E0D6;
+    color: #354458;
+    cursor: pointer;
+}
+
+button#to_test {
+    height: 50px;
+    width: 200px;
+    position: relative;
+    top:50px;
+    left:425px;
+
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    font-family: "Consolas", sans-serif;
+    margin-right: 20px;
+    background-color: #E9E0D6;
+    color: #354458;
+    cursor: pointer;
+}
+
+.container#tutorial {
+    height: 700px;
+    width: 1050px;
+    background-color: #424242;
+
+    border-radius: 50px;
+
+    position: fixed;
+    top: 30px;
+    left: 250px;
+}
+
+.container#test     {
+    display: none;
+}
+
+.tutorial   {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+#more_doors    {
+    display: none;
+}
+
+#door_wrapper   {
+    height:100px;
+    width:1000px;
+    position: relative;
+    left: 15px;
+}
+
+#more_doors .door  {
+    height: 120px;
+    width: 75px; 
+    margin-right: 25px;
+    margin-bottom: 20px;   
+}
+
+#play_again_wrapper {
+    position: relative;
+    top:200px;
+    display: none;
+}
+
+#bayes   {
+    display: none;
+}
+
+#more_doors_text    {
+    display: none;
+}
+
+#vos_savant    {
+    display: none;
+}
+
+#carlton    {
+    display: none;
+}
+
+#adams_and_devlin   {
+    display: none;
+}
+
+#the_economist  {
+    display: none;
+}
+
+#simulations    {
+    display: none;
+}
+
+
+#cp_tree    {
+    display: none;
+}
+
+#vos_savant_ext {
+    display: none;
+}
+
+#strategic_dominance    {
+    display: none;
+}
+.door   {
+    width: 250px;
+    height: 420px;
+    background-color: #FFD900;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 40pt;
+    color: white;
+    text-align: center;
+    float: left;
+}
+
+/*** table stuff ***/
+#score_care     {
+    position: relative;
+    top: 700px;
+}
+
+table
+{
+    width: 40%;
+    border: 1px solid #EFEFEF;
+}
+
+tr  {
+    height: 25px;
+}
+
+
+td  {
+    border: 1px solid #EFEFEF;
+    text-align: center;
+}
+
+table#vos_savant_tbl    {
+    width: 96%;
+    border: 1px solid #EFEFEF;
+}
+
+/*** test stuff ***/
+#test   {
+    text-align: center;
+}
+
+
+
+
+
+
+/*
+#door1	{
+	float: left;
+}
+
+#door2	{
+	float: left;
+}
+
+#door3	{
+	float: left;
+}*/
