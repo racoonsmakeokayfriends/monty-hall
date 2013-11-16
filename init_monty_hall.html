@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <link type='text/css' rel='stylesheet' href='monty_hall.css'/>
+    <script type='text/javascript' src='init_monty_hall.js'></script>
+    <title>The Monty Hall Experiment</title>
+  </head>
+  <body>
+    <div class="container" id="init_game">
+      <h1 id="title">First, Let's Make a Deal!</h1>
+      <div id="init_game_text">
+        There are three doors, two of which contain goats, and the other one contains a car. <b>Find the car!</b>
+        <ol>
+          <li>Select a door</li></br>
+          <li>Monty, <i>who knows which door the car is behind</i> will select a different door that contains a goat.</li></br>
+          <li>You must decide whether to switch or stay.</li>
+        </ol>
+      </div>
+      <div id='init_door_wrapper'>
+        <div class='door' id='door1'>1</div>
+        <div class='door' id='door2'>2</div>
+        <div class='door' id='door3'>3</div>
+      </div>
+
+      <button id='to_tutorial'>To the Tutorial!</button>
+    </div>
+  </body>
+</html>
