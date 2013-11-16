@@ -19,9 +19,11 @@ h3  {
 button {
     height: 50px;
     width: 200px;
+
     position: relative;
     top:10px;
-    left:300px;
+    left:40%;
+
 
     border: none;
     border-radius: 5px;
@@ -48,6 +50,25 @@ button#to_test {
     background-color: #E9E0D6;
     color: #354458;
     cursor: pointer;
+}
+
+#footer {
+    clear: both;
+    margin-left:auto;
+    margin-right:auto;
+    width: 75%;
+    position: relative;
+    bottom: -20px;
+    display: none;
+}
+
+
+#init_door_wrapper  {
+    clear: both;
+    margin-left:auto;
+    margin-right:auto;
+    width: 75%;
+    position: relative;
 }
 
 .container#tutorial {
@@ -133,13 +154,10 @@ button#to_test {
     display: none;
 }
 
-#strategic_dominance    {
-    display: none;
-}
 .door   {
     width: 250px;
     height: 420px;
-    background-color: #FFD900;
+    background-image: url('big_door.png');
     margin-right: 20px;
     margin-bottom: 20px;
     font-size: 40pt;

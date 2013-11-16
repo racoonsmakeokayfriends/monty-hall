@@ -1,6 +1,6 @@
 $(document).ready(function()	{
   // If you change the tutorials at all, change them here!
-  var tut_list = ['#more_doors', '#bayes', '#vos_savant', '#carlton', '#adams_and_devlin', '#the_economist', '#simulations', '#cp_tree', '#vos_savant_ext', '#strategic_dominance', '#more_doors_text'];
+  var tut_list = ['#more_doors', '#bayes', '#vos_savant', '#carlton', '#adams_and_devlin', '#the_economist', '#simulations', '#cp_tree', '#vos_savant_ext', '#more_doors_text'];
   var tut_id = tut_list[Math.floor(Math.random()*tut_list.length)];
   //tut_id = tut_list[0];
   var N = 10;   // change for number of doors used
@@ -11,6 +11,7 @@ $(document).ready(function()	{
     {    
       for (var i=0; i<10; i++) {
         $d = $('<div class="door" id="door'+i.toString()+'" value='+i.toString()+'></div>');
+        $d.css('background-image', 'url(small_door' + (i+1).toString()+ '.png)')
         $('#door_wrapper').append($d);
       }
       play_N_doors();
@@ -32,7 +33,7 @@ $(document).ready(function()	{
     $(bad_door_id).css('color', 'red');
     $(bad_door_id).css('font-size','84pt');
     $(bad_door_id).html('');
-    $(bad_door_id).css('background-image','url(http://i44.tinypic.com/2hi0a3r.png)');
+    $(bad_door_id).css('background-image','url(small_goat.png)');
   };
 
   function open_good_door_small(position) {
@@ -42,27 +43,7 @@ $(document).ready(function()	{
     $(bad_door_id).css('color', '#00CCD6');
     $(bad_door_id).css('font-size','20pt');
     $(bad_door_id).html('you win! :}');
-    $(bad_door_id).css('background-image','url(http://placekitten.com/75/120)');
-  };
-
-  function open_bad_door(position) {
-    // Opens the door at this position (1 being leftmost, N being rightmost)
-    // and reveal a goat or bear...
-    var bad_door_id = '#door' + position.toString();
-    $(bad_door_id).css('color', 'red');
-    $(bad_door_id).css('font-size','84pt');
-    $(bad_door_id).html('X');
-    $(bad_door_id).css('background-image','url(http://img.ffffound.com/static-data/assets/6/78e43214164c05226d7bc7e7e80540dcf6fd9d78_m.jpg)');
-  };
-
-  function open_good_door(position) {
-    // Opens the door at this position (1 being leftmost, N being rightmost)
-    // and reveal a goat or bear...
-    var bad_door_id = '#door' + position.toString();
-    $(bad_door_id).css('color', 'yellow');
-    $(bad_door_id).css('font-size','34pt');
-    $(bad_door_id).html('you win!');
-    $(bad_door_id).css('background-image','url(http://placekitten.com/75/120)');
+    $(bad_door_id).css('background-image','url(small_car.png)');
   };
 
   function player_pick(position)  {
