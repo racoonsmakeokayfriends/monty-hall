@@ -57,7 +57,38 @@
       </div>
 
       <div class='tutorial' id='bayes'>
-        <h1>Wicked Boring Math!</h1>
+        <h1>Bayes Theorem!</h1>
+        Let us assume this:<br/>
+        <ul>
+          <li>curtain <i>a</i> is the curtain picked by the contestant.</li>
+          <li>curtain <i>b</i> is the curtain opened by Monty Hall. </li>
+          <li>curtain <i>c</i> is the third curtain.</li>
+        </ul>
+        Let us define the following events:<br/>
+        <ul>
+          <li><i>A</i>, <i>B</i>, and <i>C</i> are the events that the prize is behind curtains <i>a</i>, <i>b</i>, and <i>c</i> respectively.</li>
+          <li><i>O</i> is the event that Monty Hall opens curtain <i>b</i>.</li>
+        </ul>
+        The Monty Hall Problem can be restated as: Is Pr{A|O}=Pr{C|O}?<br /><br/>
+
+        Bayes's Theorem:<br/>
+        <center>
+          <img src="bayes_the1.png" height="75"/>
+          ,   
+          <img src="bayes_the2.png" height="75"/><br/><br/>
+        </center>
+        Assume that the prize is randomly placed behind the curtains:
+        Pr{<i>A</i>} = Pr{<i>B</i>} = Pr{<i>C</i>} = 1/3</br>
+        Note: Pr{<i>O</i>|<i>A</i>} is the probability of <i>O</i> given <i>A</i> is true.<br/>
+        <ul>
+          Pr{<i>O</i>|<i>A</i>} = 1/2, if the prize is behind <i>a</i>, Monty Hall can open either <i>b</i> or <i>c</i></br>
+          Pr{<i>O</i>|<i>B</i>} = 0, if the prize is behind <i>b</i>, Monty Hall cannot open curtain <i>b</i></br>
+          Pr{<i>O</i>|<i>C</i>} = 1, if the prize is behind <i>c</i>, Monty Hall can only open curtain <i>b</i></br>
+        </ul>
+        <center>
+          Pr{<i>A</i>|<i>O</i>} = (1/3 * 1/2) / (1/2) = 1/3<br/>
+          Pr{<i>C</i>|<i>O</i>} = (1/3 * 1/1) / (1/2) = 2/3
+        </center>
       </div>
 
       <div class='tutorial' id='vos_savant'>
@@ -96,17 +127,13 @@
 
       <div class='tutorial' id='adams_and_devlin'>
         <h1>The Adams and Devlin Explaination</h1>
-        <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Monty_closed_doors.svg/176px-Monty_closed_doors.svg.png" /> <br />
+        <center><img src="ad_img1.png" height="160px"/></center>
         Player's pick has a 1/3 chance on the car and 2/3 chance on a goat. As each one has 1/3 chance on the car, the combined chance of door 2 and door 3 hiding the car is 2/3.
-        <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Monty_open_door_chances.svg/197px-Monty_open_door_chances.svg.png" /> <br />
+        <br />
+        <br />
+        <center><img src="ad_img2.png" height="175px"/></center>
         With the usual assumptions, after the host deliberately opened a door to intentionally show a goat, but without any further information, the player's pick still retains its 1/3 chance, likewise the other two doors still retain their combined 2/3 chance:
         Null for the door opened, but 2/3 for the host's second still unopened door.
-      </div>
-
-      <div class='tutorial' id='carlton'>
-        <h1>The Carlton Explaination</h1>
-        An intuitive explanation is to reason that players whose strategy is to switch lose if and only if they initially pick the car; that happens with probability 1/3, so switching must win with probability 2/3 (Carlton 2005, concluding remarks). The fact that the host subsequently reveals a goat in one of the unchosen doors changes nothing about the initial 1/3 probability.</br></br>
-        Simply put, if the contestant picks a goat (to which two of the three doors lead) the contestant will win the car by switching as the other goat can no longer be picked, while if the contestant picks the car (to which one door leads) the contestant will not win the car by switching. So, if contestants switch, they will win the car if they originally picked a goat and they will not win if they originally picked the car. As they have a 2 in 3 chance of originally picking a goat, they have a 2 in 3 chance of winning by switching.
       </div>
 
       <div class='tutorial' id='the_economist'>
@@ -120,8 +147,8 @@
       </div>
 
       <div class='tutorial' id='cp_tree'>
-        <h1>The Conditional Probability Tree</h1>
-        <img src='http://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Monty_tree_door1.svg/350px-Monty_tree_door1.svg.png' />
+        <h1>The Conditional Probability Tree</h1><br/>
+        <img src='tree_diagram.png' height="360" />
       </div>
 
       <div class='tutorial' id='vos_savant_ext'>
@@ -129,9 +156,11 @@
         <img src='vos_savant_ext.png' />
       </div>
       
-      <button id='to_test'>
-        To the Test!
-      </button>
+      <div class="footer" id="tutorial_footer">
+        <button id='to_test'>
+          To the Test!
+        </button>
+      </div>
     </div>
 
     <div class='container' id='test'>
@@ -143,7 +172,11 @@
       <p>Monty opens door number 3, and it <i>happens</i> to contain a goat.</p>
       <h2>What is the probability that door number one has the car?</h2>
       <br />      
-      <input type='text'></input> %
+      <input type='text' id="test_answer"></input> %
+      <p id="helper_text"></p>
+      <div class="footer" id="test_footer">
+        <button id="submit_answer">Submit!</button>
+      </div>
     </div>
 
 

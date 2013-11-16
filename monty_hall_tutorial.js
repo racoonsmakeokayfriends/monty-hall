@@ -1,8 +1,8 @@
 $(document).ready(function()	{
   // If you change the tutorials at all, change them here!
-  var tut_list = ['#more_doors', '#bayes', '#vos_savant', '#carlton', '#adams_and_devlin', '#the_economist', '#simulations', '#cp_tree', '#vos_savant_ext', '#more_doors_text'];
+  var tut_list = ['#more_doors', '#bayes', '#vos_savant', '#adams_and_devlin', '#the_economist', '#simulations', '#cp_tree', '#vos_savant_ext', '#more_doors_text'];
   var tut_id = tut_list[Math.floor(Math.random()*tut_list.length)];
-  //tut_id = tut_list[0];
+  //tut_id = tut_list[3];
   var N = 10;   // change for number of doors used
 
   function init_tutorial()  {
@@ -205,33 +205,50 @@ $(document).ready(function()	{
     $('#tutorial').hide();
     $('#test').show();
     $('#to_test').hide();
+    $('#helper_text').hide();
   });
 
-  /*
-    TO DO:
-      First Trial:
-        { } First Page
-        { } Link to tutorial page
-        { } Do regular trial
-        { } Store results of regular trial
-        
-      Tutorial: Lotsa Doors
-        { } Perhaps keep record of switch/staying and winning/losing
-            { } Round to not have insane numbers
-        { } Perhaps allow students to choose the number of doors
-            + Might give students an extra push to understand the relation
-            - It is slightly more difficult to draw a varied number of doors
-        { } Brainstorm more ideas for goat/car 
-            (it should be more clear of the 'good' door and the 'bad' door)
-        { } Maybe have triangle indicating unopened door for more clarity
-            
-      Test:
-        { } How exactly are we going to test knowledge?
+  // just checks if input is a whole number
+  function check_valid_input(x)  {
+    if (x.indexOf('/') != -1 || x.indexOf('.') != -1 || x.indexOf('-') != -1) {
+      return false;
+    }
+    var input = parseInt(x);
+    if (isNaN(input)) {
+      return false;
+    }
+    if (input > 100)  {
+      return false;
+    }
+    return true;
+  };
 
-      Database:
-        { } Record the tutorial given
-        { } Record the results of the test
+  function check_answer(x)  {
+    var input = parseInt(x);
+    if (input == 50) {
+      return true;
+    }
+    return false;    
+  }
 
-  */
+  $("#submit_answer").click(function()  {
+    $('#helper_text').show();
+
+    if (check_valid_input($('#test_answer').val())) {
+
+      if (check_answer($('#test_answer').val()))  {
+        // TO DO: store result, end game
+        $('#helper_text').html("correct!");       
+      }
+      else  {
+        // TO DO: store result, end game
+        $('#helper_text').html("sorry, that's not correct"); 
+      }
+    }    
+    else  {
+      $('#test_answer').val("");
+      $('#helper_text').html("Please submit a valid (0-100) integer answer!");
+    }
+  });
 
 });

@@ -127,7 +127,7 @@ $(document).ready(function()	{
           $(new_choice).css('background-image','url(big_goat.png)');
         }        
         game_over = true;
-        $('#footer').show();  
+        $('#init_footer').show();  
       }
     }   
   });
