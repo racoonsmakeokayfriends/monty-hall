@@ -4,6 +4,10 @@ html    {
     color:#EFEFEF;
 }
 
+p   {
+    width:75%;
+}
+
 h1	{
 	text-align: center;
 }

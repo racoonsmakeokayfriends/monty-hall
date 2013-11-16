@@ -2,7 +2,7 @@ $(document).ready(function()	{
   // If you change the tutorials at all, change them here!
   var tut_list = ['#more_doors', '#bayes', '#vos_savant', '#adams_and_devlin', '#the_economist', '#simulations', '#cp_tree', '#vos_savant_ext', '#more_doors_text'];
   var tut_id = tut_list[Math.floor(Math.random()*tut_list.length)];
-  //tut_id = tut_list[3];
+  //tut_id = tut_list[4];
   var N = 10;   // change for number of doors used
 
   function init_tutorial()  {
