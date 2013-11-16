@@ -4,7 +4,7 @@ html    {
     color:#EFEFEF;
 }
 
-p   {
+#more_doors_text p   {
     width:75%;
 }
 
@@ -146,6 +146,12 @@ button#submit_answer    {
     display: none;
 }
 
+#vos_savant_ext_img    {
+    top: -10px;
+    padding-left: 5em;
+    position: relative;
+}
+
 .door   {
     width: 250px;
     height: 420px;
@@ -166,6 +172,7 @@ button#submit_answer    {
 
 table
 {
+    float: left;
     width: 40%;
     border: 1px solid #EFEFEF;
 }
@@ -189,21 +196,3 @@ table#vos_savant_tbl    {
 #test   {
     text-align: center;
 }
-
-
-
-
-
-
-/*
-#door1	{
-	float: left;
-}
-
-#door2	{
-	float: left;
-}
-
-#door3	{
-	float: left;
-}*/
